@@ -1,97 +1,73 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
   <meta charset="utf-8">
   
+  <title>读书笔记:《Go语言编程》 | /home/shiywang</title>
+  <meta name="author" content="Shiyang Wang">
+  
+  <meta name="description" content="《Go语言编程》读书笔记顺序编程闭包同是静态类型语言的Go作用域和C语言类似，虽然变量在栈上(stack)还是堆上(heap)是由编译器决定，这点和C语言用户自己决定不一样，但是作用于访问还是类似的，比如如下代码:123456func f() &amp;#123;	n := 999;	...&amp;#125;fm">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="读书笔记:《Go语言编程》"/>
+  <meta property="og:site_name" content="/home/shiywang"/>
 
   
-  <title>读书笔记:《Go语言编程》 | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="《Go语言编程》读书笔记顺序编程闭包同是静态类型语言的Go作用域和C语言类似，虽然变量在栈上(stack)还是堆上(heap)是由编译器决定，这点和C语言用户自己决定不一样，但是作用于访问还是类似的，比如如下代码:123456func f() &amp;#123;	n := 999;	...&amp;#125;fmt.Println(n) //这里是不能访问一个函数内的变量的 但是golang支持闭包，所以这样是">
-<meta property="og:type" content="article">
-<meta property="og:title" content="读书笔记:《Go语言编程》">
-<meta property="og:url" content="http://yoursite.com/2018/01/17/golang1/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="《Go语言编程》读书笔记顺序编程闭包同是静态类型语言的Go作用域和C语言类似，虽然变量在栈上(stack)还是堆上(heap)是由编译器决定，这点和C语言用户自己决定不一样，但是作用于访问还是类似的，比如如下代码:123456func f() &amp;#123;	n := 999;	...&amp;#125;fmt.Println(n) //这里是不能访问一个函数内的变量的 但是golang支持闭包，所以这样是">
-<meta property="og:image" content="http://yoursite.com/2018/01/17/golang1/virtualbase.jpg">
-<meta property="og:updated_time" content="2018-01-17T11:16:32.693Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="读书笔记:《Go语言编程》">
-<meta name="twitter:description" content="《Go语言编程》读书笔记顺序编程闭包同是静态类型语言的Go作用域和C语言类似，虽然变量在栈上(stack)还是堆上(heap)是由编译器决定，这点和C语言用户自己决定不一样，但是作用于访问还是类似的，比如如下代码:123456func f() &amp;#123;	n := 999;	...&amp;#125;fmt.Println(n) //这里是不能访问一个函数内的变量的 但是golang支持闭包，所以这样是">
-<meta name="twitter:image" content="http://yoursite.com/2018/01/17/golang1/virtualbase.jpg">
+    <meta property="og:image" content=""/>
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+  
+    <link rel="alternative" href="/atom.xml" title="/home/shiywang" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
+    <link href="/favicon.png" rel="icon">
   
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">  
+  <link rel="stylesheet" href="/css/sidenav.css" media="screen" type="text/css">  
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
   
-  <link rel="stylesheet" href="/css/style.css">
+
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-golang1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/01/17/golang1/" class="article-date">
-  <time datetime="2018-01-17T11:16:32.693Z" itemprop="datePublished">2018-01-17</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Golang/">Golang</a>
-  </div>
+<body id="body" data-spy="scroll" data-target=".toc">
+  <div class="container" id="container">
+	<div class="content">
+	  <div class="page-header">		
+  <h1><a class="brand" href="/">/home/shiywang</a><span class="split"></span><span class="title">读书笔记:《Go语言编程》</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2018-01-17</span></h1>
+</div>		
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+<div class="row page">
+  <!-- cols -->	
   
-    <h1 class="article-title" itemprop="name">
-      读书笔记:《Go语言编程》
-    </h1>
+  <div class="col-xs-12 col-sm-3 col-md-3 toc"> 
+	<!-- toc -->
+<script type="text/javascript">
+		jQuery(document).ready(function() {
+ 		   generateWikiTOC('.note', '.toc',  2 , 2 );
+		});
+</script>
+  </div><!-- col-md-3 -->
+  
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="《Go语言编程》读书笔记"><a href="#《Go语言编程》读书笔记" class="headerlink" title="《Go语言编程》读书笔记"></a>《Go语言编程》读书笔记</h2><h2 id="顺序编程"><a href="#顺序编程" class="headerlink" title="顺序编程"></a>顺序编程</h2><h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>同是静态类型语言的Go作用域和C语言类似，虽然变量在栈上(stack)还是堆上(heap)是由编译器决定，这点和C语言用户自己决定不一样，但是作用于访问还是类似的，比如如下代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">func f() &#123;</div><div class="line">	n := 999;</div><div class="line">	...</div><div class="line">&#125;</div><div class="line"></div><div class="line">fmt.Println(n) //这里是不能访问一个函数内的变量的</div></pre></td></tr></table></figure></p>
+  
+  <div class="col-xs-12 col-sm-9 col-md-9 note">
+	
+
+	  <!-- content -->
+	  <h2 id="《Go语言编程》读书笔记"><a href="#《Go语言编程》读书笔记" class="headerlink" title="《Go语言编程》读书笔记"></a>《Go语言编程》读书笔记</h2><h2 id="顺序编程"><a href="#顺序编程" class="headerlink" title="顺序编程"></a>顺序编程</h2><h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>同是静态类型语言的Go作用域和C语言类似，虽然变量在栈上(stack)还是堆上(heap)是由编译器决定，这点和C语言用户自己决定不一样，但是作用于访问还是类似的，比如如下代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">func f() &#123;</div><div class="line">	n := 999;</div><div class="line">	...</div><div class="line">&#125;</div><div class="line"></div><div class="line">fmt.Println(n) //这里是不能访问一个函数内的变量的</div></pre></td></tr></table></figure></p>
 <p>但是golang支持闭包，所以这样是可以的:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">func f() func()int &#123;</div><div class="line">	n := 999;</div><div class="line">	return func() int&#123;</div><div class="line">		return n</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">func main() &#123;</div><div class="line">	f1 := f()</div><div class="line">	fmt.Println(f1())</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>闭包的简单定义是<code>能够读取其他函数内部变量的函数</code>,并且这里函数内的变量<code>n</code>一定是在堆上，这点C语言是没办法做到的，除非堆上malloc一个变量。</p>
 <h2 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h2><h2 id="类型系统"><a href="#类型系统" class="headerlink" title="类型系统"></a>类型系统</h2><p>类型系统里比较重要的两个概念<code>Pass By Reference</code>和 <code>Pass By Value</code>。<br>在C语言里处理数组在函数传递的时候比较特别是<code>Pass By Reference</code>,其他对象都是<code>Pass By Value</code> 结构体里的数组也不例外，在C语言中如下是等价的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">如果函数是test(a), a 是一个数组</div><div class="line">void test(int * p) &#123;</div><div class="line">    *(p+1) = 1;</div><div class="line">&#125; </div><div class="line"></div><div class="line">void test(int p[]) &#123;</div><div class="line">    p[1] = 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
@@ -124,128 +100,89 @@
 <p>reflect.TypeOf()</p>
 <p>reflect.ValueOf() //这里是值拷贝 可以用CanSet()函数来判断</p>
 <p>所以要想得到理想的reflect工作流<br>需要首先  v = ValueOf(&amp;x) 但是地址是不能直接Set的，要 v.Elem() 之后再Set()</p>
+	  
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/17/golang1/" data-id="cjcizaxm10000ccpiz578t67o" class="article-share-link">Teilen</a>
-      
-      
-    </footer>
+	  <div>
+  		<center>
+		  <div class="pagination">
+<ul class="pagination">
+	
+	
+	
+	
+	
+	
+		
+	
+		
+	
+		
+			
+			
+		
+	
+	
+	
+		<li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+	<li><a href="/"><i class="fa fa-archive"></i>Home</a></li>
+	
+		<li class="next disabled"><a>next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+	
+</ul>
+</div>
+
+		</center>
+	  </div>
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+	
+  </div><!-- row -->
+
+	</div>
   </div>
+  <div class="container-narrow">
+	<footer> <p>
+  &copy; 2018 Shiyang Wang
   
-    
-<nav id="article-nav">
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-wixo/">Wixo</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
   
-    <a href="/2018/01/17/reading-list/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Neuer</strong>
-      <div class="article-nav-title">
-        
-          2017读书清单
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2018/01/09/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Älter</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
 
-  
-</article>
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Kategorien</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Golang/">Golang</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Kubernetes/">Kubernetes</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2018/01/17/kubernetes1/">Kubernetes 架构 Overview</a>
-          </li>
-        
-          <li>
-            <a href="/2018/01/17/reading-list/">2017读书清单</a>
-          </li>
-        
-          <li>
-            <a href="/2018/01/17/golang1/">读书笔记:《Go语言编程》</a>
-          </li>
-        
-          <li>
-            <a href="/2018/01/09/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2018 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.tableofcontents.min.js"></script>
+<script src="/js/tocgenerator.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
 
 
 
-  </div>
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
 </body>
 </html>
