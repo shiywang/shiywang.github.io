@@ -3,6 +3,40 @@
   
     
     <entry>
+      <title><![CDATA[Goals 2018]]></title>
+      <url>/2018/01/17/goals2018/</url>
+      <content type="html"><![CDATA[<p>Recently just a lot of thinking bump out of my mind, some of the effort worth for practicing through the whole life time.</p>
+<p>Just pick some relatively easy ones.</p>
+<h3 id="short-term"><a href="#short-term" class="headerlink" title="short term"></a>short term</h3><ol>
+<li><p>algorithm (leetcode)</p>
+</li>
+<li><p>phonetic </p>
+</li>
+<li><p>english pronunciation (similar to 2, but a little different)</p>
+</li>
+<li><p>vocabulary (still revising 3000 key words)</p>
+</li>
+</ol>
+<h3 id="long-term"><a href="#long-term" class="headerlink" title="long term"></a>long term</h3><ol>
+<li><p>guitar practice (listen, practive)</p>
+</li>
+<li><p>native speaker (listening, pronunciation, vocabulary, idiom, slang, even proverb)</p>
+</li>
+<li><p>math learning</p>
+</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> thinking </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[读书笔记:《Go语言编程》]]></title>
       <url>/2018/01/17/golang1/</url>
       <content type="html"><![CDATA[<h2 id="《Go语言编程》读书笔记"><a href="#《Go语言编程》读书笔记" class="headerlink" title="《Go语言编程》读书笔记"></a>《Go语言编程》读书笔记</h2><h2 id="顺序编程"><a href="#顺序编程" class="headerlink" title="顺序编程"></a>顺序编程</h2><h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>同是静态类型语言的Go作用域和C语言类似，虽然变量在栈上(stack)还是堆上(heap)是由编译器决定，这点和C语言用户自己决定不一样，但是作用于访问还是类似的，比如如下代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">func f() &#123;</div><div class="line">	n := 999;</div><div class="line">	...</div><div class="line">&#125;</div><div class="line"></div><div class="line">fmt.Println(n) //这里是不能访问一个函数内的变量的</div></pre></td></tr></table></figure></p>
