@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Kubernetes 架构 Overview | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Master/Node 架构Master相当于中心控制集群其中Master中的APIServer和etcd交流，Node相当于工作集群用来和docker daemon/runc 打交道实际操作管理容器，这里需要注意的是etcd是一个分布式的KV存储系统,支持WATCH接口,通过http long poll实现，使用Raft算法保证数据一致性。 Kubernetes实际模块功能黄色的部分是运行在M">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kubernetes 架构 Overview">
+<meta property="og:url" content="http://yoursite.com/2018/01/17/kubernetes1/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Master/Node 架构Master相当于中心控制集群其中Master中的APIServer和etcd交流，Node相当于工作集群用来和docker daemon/runc 打交道实际操作管理容器，这里需要注意的是etcd是一个分布式的KV存储系统,支持WATCH接口,通过http long poll实现，使用Raft算法保证数据一致性。 Kubernetes实际模块功能黄色的部分是运行在M">
+<meta property="og:image" content="http://yoursite.com/2018/01/17/kubernetes1/overview.png">
+<meta property="og:image" content="http://yoursite.com/2018/01/17/kubernetes1/controller.jpeg">
+<meta property="og:image" content="http://yoursite.com/2018/01/17/kubernetes1/pod.png">
+<meta property="og:image" content="http://yoursite.com/2018/01/17/kubernetes1/rc.png">
+<meta property="og:image" content="http://yoursite.com/2018/01/17/kubernetes1/node1.png">
+<meta property="og:image" content="http://yoursite.com/2018/01/17/kubernetes1/node2.png">
+<meta property="og:image" content="http://yoursite.com/2018/01/17/kubernetes1/node3.png">
+<meta property="og:image" content="http://yoursite.com/2018/01/17/kubernetes1/node4.png">
+<meta property="og:image" content="http://yoursite.com/2018/01/17/kubernetes1/svc.png">
+<meta property="og:updated_time" content="2018-01-17T11:16:32.696Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kubernetes 架构 Overview">
+<meta name="twitter:description" content="Master/Node 架构Master相当于中心控制集群其中Master中的APIServer和etcd交流，Node相当于工作集群用来和docker daemon/runc 打交道实际操作管理容器，这里需要注意的是etcd是一个分布式的KV存储系统,支持WATCH接口,通过http long poll实现，使用Raft算法保证数据一致性。 Kubernetes实际模块功能黄色的部分是运行在M">
+<meta name="twitter:image" content="http://yoursite.com/2018/01/17/kubernetes1/overview.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-kubernetes1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/17/kubernetes1/" class="article-date">
+  <time datetime="2018-01-17T11:16:32.696Z" itemprop="datePublished">2018-01-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Kubernetes/">Kubernetes</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Kubernetes 架构 Overview
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="overview.png" alt=""></p>
+<h4 id="Master-Node-架构"><a href="#Master-Node-架构" class="headerlink" title="Master/Node 架构"></a>Master/Node 架构</h4><p>Master相当于中心控制集群其中Master中的APIServer和etcd交流，Node相当于工作集群用来和docker daemon/runc 打交道实际操作管理容器，这里需要注意的是etcd是一个分布式的KV存储系统,支持WATCH接口,通过http long poll实现，使用Raft算法保证数据一致性。</p>
+<h4 id="Kubernetes实际模块功能"><a href="#Kubernetes实际模块功能" class="headerlink" title="Kubernetes实际模块功能"></a>Kubernetes实际模块功能</h4><p>黄色的部分是运行在Master上的进程，绿色的部分是运行在Node上的进程,紫色的部分是以插件或者pod的形式运行。对于OpenShift,基本的架构都是复用Kubernetes，一部分不同的地方在于kubernets 有许多自己加入的<a href="https://kubernetes.io/docs/admin/admission-controllers/" target="_blank" rel="external">Admission Controllers</a> 注意这个和第三部分的Controller不是一个概念.当然OpenShift也有一些自己的controller 比如说Build Config, Build, Deployment Config 等等这些kubernetes所没有的功能。</p>
+<h4 id="Contronller-简介"><a href="#Contronller-简介" class="headerlink" title="Contronller 简介"></a>Contronller 简介</h4><p>在Kubernets/OpenShift中Controller 是一个非常重要的概念，它的定义其实很简单，就是一个 loop, 通过和APIServer通讯获取它想要的数据，然后比对用户目前想要达成的状态，如果者两者状态不一致，就做一些同步的操作，然后将结构在写回APIServer,其实主要是etcd里，因为在Kubernetes/OpenShift中，所有的资源都是以Json的形式持久华在etcd中，而etcd只和APIServer打交道。</p>
+<p><img src="controller.jpeg" alt=""></p>
+<p>这里有一个简单的controller 的<a href="https://github.com/caesarxuchao/servicelookup" target="_blank" rel="external">example</a></p>
+<h4 id="Pod或Replication-Controller创建的时序图"><a href="#Pod或Replication-Controller创建的时序图" class="headerlink" title="Pod或Replication Controller创建的时序图"></a>Pod或Replication Controller创建的时序图</h4><p>这里我画了两个时序图，关于一个Pod是如何创建的，一个RC是如果创建的，这里contoller mananger 是所有generic controller 的一个集合的进程(目前所有的<a href="https://github.com/kubernetes/kubernetes/tree/master/pkg/controller" target="_blank" rel="external">kubernetes controller</a>), 而Scheduler虽然不是一个generic 的controller,但是他的行为模式和controller 是没有区别的 Scheduler相关的<a href="https://github.com/kubernetes/kubernetes/tree/master/plugin/pkg/scheduler" target="_blank" rel="external">代码路径</a>。</p>
+<p><img src="pod.png" alt=""></p>
+<p><img src="rc.png" alt=""></p>
+<h4 id="Kubernetes-网络解决方案"><a href="#Kubernetes-网络解决方案" class="headerlink" title="Kubernetes 网络解决方案"></a>Kubernetes 网络解决方案</h4><p>首先，kubernetes Docker 在网络方面都没有提供完整的解决方案，对于在不同网段的两个Pod,他们之间是无法直接通讯的，所以这里有几种解决方案</p>
+<p><img src="node1.png" alt=""></p>
+<h5 id="1-Node桥接模式"><a href="#1-Node桥接模式" class="headerlink" title="1.Node桥接模式"></a>1.Node桥接模式</h5><p>docker0相当于一台交换机，而用一根网线把两个交换机桥接起来，这样所有在这个交换机上的设备就可以通信，但是缺点就是ARP风暴和安全问题</p>
+<p><img src="node2.png" alt=""></p>
+<h5 id="2-Node路由模式"><a href="#2-Node路由模式" class="headerlink" title="2.Node路由模式"></a>2.Node路由模式</h5><p>这种模式需要更改所有Node和链路上所有路由的路由规则，而且每次增删Node都需要增删规则，如果有一套动态路由协议，并且集群都在一个大内网环境，这个网络方案还可行，如果在两个Node在公网上，这个方案无法实现。</p>
+<p><img src="node3.png" alt=""></p>
+<h5 id="3-隧道模式"><a href="#3-隧道模式" class="headerlink" title="3.隧道模式"></a>3.隧道模式</h5><p>对于公网上的Node如果网段不同只能通过隧道的方式解决，Kubernets本身不提供任何方案，OpenShift 通过Open vSwitch 来解决，我这里介绍了CoreOS的解决方案flannel,其实隧道原理都大同小异。</p>
+<p><img src="node4.png" alt=""></p>
+<h4 id="Kubernets-Service-的原理介绍"><a href="#Kubernets-Service-的原理介绍" class="headerlink" title="Kubernets Service 的原理介绍"></a>Kubernets Service 的原理介绍</h4><p>首先，Kubernets/OpenShift 的Service是一个负载均衡的概念（或者反向代理)主要实现是使用iptables, iptables是通过写一些规则来转发数据包，而kube-proxy就是用来在Node上操作这些iptables.<br>这里需要注意的是: Service的ip是一个不存在的虚拟ip(仅仅适用与cluster内部),是ping不同的，因为它只存在于etcd里供APIServer和Kube-proxy查询修改iptables来做到数据包转发的作用。</p>
+<p>如果需要对外访问，需要配置Service对应的LoadBalancer(这个由Issa基础设施提供，比如AWS,GCE都有相应的LoadBalancer)而OpenShift自己提供了一个router的资源来expose service，另外kubernets社区上有目前也有一个叫ingress的controller/资源来解决Service对外访问的问题。</p>
+<p><img src="svc.png" alt=""></p>
+<h4 id="其他未涉及的部分"><a href="#其他未涉及的部分" class="headerlink" title="其他未涉及的部分"></a>其他未涉及的部分</h4><p>1.Auth</p>
+<p>2.Storage</p>
+<p>3.CLI</p>
+<p>4.Kube-Dns</p>
+<p>5.各种Controller的具体功能</p>
+<p>6.Scheduler 具体调度算法</p>
+<p>7.Federation Cluster, Federation Service</p>
+<p>8.Aggreator APIServer</p>
+<p>9.HA Proxy</p>
+<p>10.APIServer 多线程下的Optimistic Concurrency Control</p>
+<p>11.Admission Controllers</p>
+<p>12.etcd 的机制</p>
+<p>13.等等</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/01/17/kubernetes1/" data-id="cjciz2ls70003zkpidwgug8f0" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/01/17/reading-list/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">2017读书清单</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Kategorien</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Golang/">Golang</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Kubernetes/">Kubernetes</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/01/17/kubernetes1/">Kubernetes 架构 Overview</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/17/reading-list/">2017读书清单</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/17/golang1/">读书笔记:《Go语言编程》</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/09/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
