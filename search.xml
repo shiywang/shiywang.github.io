@@ -3,6 +3,53 @@
   
     
     <entry>
+      <title><![CDATA[读书笔记:《Go语言编程》]]></title>
+      <url>/2018/01/17/golang1/</url>
+      <content type="html"><![CDATA[<h2 id="《Go语言编程》读书笔记"><a href="#《Go语言编程》读书笔记" class="headerlink" title="《Go语言编程》读书笔记"></a>《Go语言编程》读书笔记</h2><h2 id="顺序编程"><a href="#顺序编程" class="headerlink" title="顺序编程"></a>顺序编程</h2><h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>同是静态类型语言的Go作用域和C语言类似，虽然变量在栈上(stack)还是堆上(heap)是由编译器决定，这点和C语言用户自己决定不一样，但是作用于访问还是类似的，比如如下代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">func f() &#123;</div><div class="line">	n := 999;</div><div class="line">	...</div><div class="line">&#125;</div><div class="line"></div><div class="line">fmt.Println(n) //这里是不能访问一个函数内的变量的</div></pre></td></tr></table></figure></p>
+<p>但是golang支持闭包，所以这样是可以的:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">func f() func()int &#123;</div><div class="line">	n := 999;</div><div class="line">	return func() int&#123;</div><div class="line">		return n</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">func main() &#123;</div><div class="line">	f1 := f()</div><div class="line">	fmt.Println(f1())</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>闭包的简单定义是<code>能够读取其他函数内部变量的函数</code>,并且这里函数内的变量<code>n</code>一定是在堆上，这点C语言是没办法做到的，除非堆上malloc一个变量。</p>
+<h2 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h2><h2 id="类型系统"><a href="#类型系统" class="headerlink" title="类型系统"></a>类型系统</h2><p>类型系统里比较重要的两个概念<code>Pass By Reference</code>和 <code>Pass By Value</code>。<br>在C语言里处理数组在函数传递的时候比较特别是<code>Pass By Reference</code>,其他对象都是<code>Pass By Value</code> 结构体里的数组也不例外，在C语言中如下是等价的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">如果函数是test(a), a 是一个数组</div><div class="line">void test(int * p) &#123;</div><div class="line">    *(p+1) = 1;</div><div class="line">&#125; </div><div class="line"></div><div class="line">void test(int p[]) &#123;</div><div class="line">    p[1] = 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后Go语言这点不太一样数组是<code>Pass By Reference</code>的。然后Go语言引入了一种叫做切片(Slice)的类型,这个有点像C的数组，切片和数组看起来十分形似，唯一的区别实在声明的时候：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//That is a slice:</div><div class="line">var av = []int&#123;1,5,2,3,7&#125;</div><div class="line"></div><div class="line">//And those are arrays:</div><div class="line">var av = [...]int&#123;1,5,2,3,7&#125;</div><div class="line">var bv = [5]int&#123;1,5,2,3,7&#125;</div></pre></td></tr></table></figure></p>
+<p>另外数组可以转换成切片通过这个方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sli := arr[:]</div></pre></td></tr></table></figure></p>
+<h4 id="Go语言有四种特殊的类型通常是看作Pass-by-Reference的"><a href="#Go语言有四种特殊的类型通常是看作Pass-by-Reference的" class="headerlink" title="Go语言有四种特殊的类型通常是看作Pass by Reference的"></a>Go语言有四种特殊的类型通常是看作<code>Pass by Reference</code>的</h4><ol>
+<li>切片(Slice)</li>
+<li>接口(Interface)</li>
+<li>Map</li>
+<li>Channel</li>
+</ol>
+<h2 id="结构体部分"><a href="#结构体部分" class="headerlink" title="结构体部分"></a>结构体部分</h2><p>匿名引用指针和值引用的区别</p>
+<p>C++的虚基类引出区别,首先讲一下虚基类</p>
+<p><img src="virtualbase.jpg" alt=""></p>
+<p>在C++中如果基类A分支出两个子类B和C，然后孙子类D同时又继承了B和C,这时基类A中有有一个成员变量是一个公共的属性，比如department,而孙子类既然享受了继承的好处，但是如果想调用name的话编译器会又一个问题，就是不知道是用从那个分支继承下来的成员变量，这个时候如果这个department一个大家共用的属性,这样多重继承下来不仅有数据冗余同时还要每次显示告诉编译器使用从那个分支继承下来的变量，非常麻烦，C++在这里引入了虚继类的概念<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">class A&#123;</div><div class="line">protected:</div><div class="line">    int department;</div><div class="line">&#125;;</div><div class="line">//直接基类B</div><div class="line">class B: virtual public A&#123;  //虚继承</div><div class="line">protected:</div><div class="line">    int department;</div><div class="line">&#125;;</div><div class="line">//直接基类C</div><div class="line">class C: virtual public A&#123;  //虚继承</div><div class="line">protected:</div><div class="line">    int department;</div><div class="line">&#125;;</div><div class="line">//派生类D</div><div class="line">class D: public B, public C&#123;</div></pre></td></tr></table></figure></p>
+<p>这样这里的department其实就只有一份，不管哪里的修改都是对A的department进行修改，其实原理也很简单，就是用指针，然后大家都共享A变量的那一块内存就行了呗,Go在这里的实现非常的直白</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">type A struct &#123;</div><div class="line">	department int</div><div class="line">&#125;</div><div class="line"></div><div class="line">type B struct &#123;</div><div class="line">	base *A</div><div class="line">&#125;</div><div class="line"></div><div class="line">type C struct &#123;</div><div class="line">	base *A</div><div class="line">&#125;</div><div class="line"></div><div class="line">type D struct &#123;</div><div class="line">	b B</div><div class="line">	c C</div><div class="line">&#125;</div><div class="line"></div><div class="line">var d = new(D)</div><div class="line">d.b.base = new(A)</div><div class="line">d.c.base = d.b.base //都是同一块内存指向</div><div class="line">d.b.base.department = 999</div><div class="line">fmt.Println(d.b.base.department)</div><div class="line">fmt.Println(d.c.base.department)</div></pre></td></tr></table></figure>
+<h2 id="结构体组合"><a href="#结构体组合" class="headerlink" title="结构体组合"></a>结构体组合</h2><p>匿名组合</p>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><h3 id="侵入性和非侵入性"><a href="#侵入性和非侵入性" class="headerlink" title="侵入性和非侵入性"></a>侵入性和非侵入性</h3><p>不同于java, C++ 这类接口我们称为侵入式接口。<br>“侵入式”的主要表现在于实现类需要明确声明自己实现了某个接口。</p>
+<p>这种强制性的接口继承是面向对象编程思想发展过程中<br>一个遭受相当多置疑的特性。</p>
+<h3 id="侵入式接口的两个问题"><a href="#侵入式接口的两个问题" class="headerlink" title="侵入式接口的两个问题"></a>侵入式接口的两个问题</h3><p>正是因为这种不合理的设计，实现Java、Csharp类库中的每个类时都需要纠结以下两个问题。<br> 问题1:我提供哪些接口好呢?<br> 问题2:如果两个类实现了相同的接口，应该把接口放到哪个包好呢?</p>
+<p>接口赋值的一个代码的例子</p>
+<ol>
+<li>接口包含两个方法其中一个值引用，一个地址引用，赋值变量应该用值还是地址?</li>
+<li>接口方法之间赋值，只要是子集，就可以赋值,并且顺序无关</li>
+</ol>
+<h2 id="接口查询接口组合"><a href="#接口查询接口组合" class="headerlink" title="接口查询接口组合"></a>接口查询接口组合</h2><p>只看类C代码实现</p>
+<h3 id="空接口-interface"><a href="#空接口-interface" class="headerlink" title="空接口  {}interface"></a>空接口  {}interface</h3><p>可以做泛型编程而不需要空指针</p>
+<h2 id="并发编程-go-routinue"><a href="#并发编程-go-routinue" class="headerlink" title="并发编程 go routinue"></a>并发编程 go routinue</h2><h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><p>Type 和 Value</p>
+<p>reflect.TypeOf()</p>
+<p>reflect.ValueOf() //这里是值拷贝 可以用CanSet()函数来判断</p>
+<p>所以要想得到理想的reflect工作流<br>需要首先  v = ValueOf(&amp;x) 但是地址是不能直接Set的，要 v.Elem() 之后再Set()</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Golang </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[2017读书清单]]></title>
       <url>/2018/01/17/reading-list/</url>
       <content type="html"><![CDATA[<h3 id="今年读的一些书"><a href="#今年读的一些书" class="headerlink" title="今年读的一些书"></a>今年读的一些书</h3><ol>
@@ -103,53 +150,6 @@
         <categories>
             
             <category> Kubernetes </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[读书笔记:《Go语言编程》]]></title>
-      <url>/2018/01/17/golang1/</url>
-      <content type="html"><![CDATA[<h2 id="《Go语言编程》读书笔记"><a href="#《Go语言编程》读书笔记" class="headerlink" title="《Go语言编程》读书笔记"></a>《Go语言编程》读书笔记</h2><h2 id="顺序编程"><a href="#顺序编程" class="headerlink" title="顺序编程"></a>顺序编程</h2><h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>同是静态类型语言的Go作用域和C语言类似，虽然变量在栈上(stack)还是堆上(heap)是由编译器决定，这点和C语言用户自己决定不一样，但是作用于访问还是类似的，比如如下代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">func f() &#123;</div><div class="line">	n := 999;</div><div class="line">	...</div><div class="line">&#125;</div><div class="line"></div><div class="line">fmt.Println(n) //这里是不能访问一个函数内的变量的</div></pre></td></tr></table></figure></p>
-<p>但是golang支持闭包，所以这样是可以的:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">func f() func()int &#123;</div><div class="line">	n := 999;</div><div class="line">	return func() int&#123;</div><div class="line">		return n</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">func main() &#123;</div><div class="line">	f1 := f()</div><div class="line">	fmt.Println(f1())</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>闭包的简单定义是<code>能够读取其他函数内部变量的函数</code>,并且这里函数内的变量<code>n</code>一定是在堆上，这点C语言是没办法做到的，除非堆上malloc一个变量。</p>
-<h2 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h2><h2 id="类型系统"><a href="#类型系统" class="headerlink" title="类型系统"></a>类型系统</h2><p>类型系统里比较重要的两个概念<code>Pass By Reference</code>和 <code>Pass By Value</code>。<br>在C语言里处理数组在函数传递的时候比较特别是<code>Pass By Reference</code>,其他对象都是<code>Pass By Value</code> 结构体里的数组也不例外，在C语言中如下是等价的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">如果函数是test(a), a 是一个数组</div><div class="line">void test(int * p) &#123;</div><div class="line">    *(p+1) = 1;</div><div class="line">&#125; </div><div class="line"></div><div class="line">void test(int p[]) &#123;</div><div class="line">    p[1] = 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>然后Go语言这点不太一样数组是<code>Pass By Reference</code>的。然后Go语言引入了一种叫做切片(Slice)的类型,这个有点像C的数组，切片和数组看起来十分形似，唯一的区别实在声明的时候：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//That is a slice:</div><div class="line">var av = []int&#123;1,5,2,3,7&#125;</div><div class="line"></div><div class="line">//And those are arrays:</div><div class="line">var av = [...]int&#123;1,5,2,3,7&#125;</div><div class="line">var bv = [5]int&#123;1,5,2,3,7&#125;</div></pre></td></tr></table></figure></p>
-<p>另外数组可以转换成切片通过这个方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sli := arr[:]</div></pre></td></tr></table></figure></p>
-<h4 id="Go语言有四种特殊的类型通常是看作Pass-by-Reference的"><a href="#Go语言有四种特殊的类型通常是看作Pass-by-Reference的" class="headerlink" title="Go语言有四种特殊的类型通常是看作Pass by Reference的"></a>Go语言有四种特殊的类型通常是看作<code>Pass by Reference</code>的</h4><ol>
-<li>切片(Slice)</li>
-<li>接口(Interface)</li>
-<li>Map</li>
-<li>Channel</li>
-</ol>
-<h2 id="结构体部分"><a href="#结构体部分" class="headerlink" title="结构体部分"></a>结构体部分</h2><p>匿名引用指针和值引用的区别</p>
-<p>C++的虚基类引出区别,首先讲一下虚基类</p>
-<p><img src="virtualbase.jpg" alt=""></p>
-<p>在C++中如果基类A分支出两个子类B和C，然后孙子类D同时又继承了B和C,这时基类A中有有一个成员变量是一个公共的属性，比如department,而孙子类既然享受了继承的好处，但是如果想调用name的话编译器会又一个问题，就是不知道是用从那个分支继承下来的成员变量，这个时候如果这个department一个大家共用的属性,这样多重继承下来不仅有数据冗余同时还要每次显示告诉编译器使用从那个分支继承下来的变量，非常麻烦，C++在这里引入了虚继类的概念<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">class A&#123;</div><div class="line">protected:</div><div class="line">    int department;</div><div class="line">&#125;;</div><div class="line">//直接基类B</div><div class="line">class B: virtual public A&#123;  //虚继承</div><div class="line">protected:</div><div class="line">    int department;</div><div class="line">&#125;;</div><div class="line">//直接基类C</div><div class="line">class C: virtual public A&#123;  //虚继承</div><div class="line">protected:</div><div class="line">    int department;</div><div class="line">&#125;;</div><div class="line">//派生类D</div><div class="line">class D: public B, public C&#123;</div></pre></td></tr></table></figure></p>
-<p>这样这里的department其实就只有一份，不管哪里的修改都是对A的department进行修改，其实原理也很简单，就是用指针，然后大家都共享A变量的那一块内存就行了呗,Go在这里的实现非常的直白</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">type A struct &#123;</div><div class="line">	department int</div><div class="line">&#125;</div><div class="line"></div><div class="line">type B struct &#123;</div><div class="line">	base *A</div><div class="line">&#125;</div><div class="line"></div><div class="line">type C struct &#123;</div><div class="line">	base *A</div><div class="line">&#125;</div><div class="line"></div><div class="line">type D struct &#123;</div><div class="line">	b B</div><div class="line">	c C</div><div class="line">&#125;</div><div class="line"></div><div class="line">var d = new(D)</div><div class="line">d.b.base = new(A)</div><div class="line">d.c.base = d.b.base //都是同一块内存指向</div><div class="line">d.b.base.department = 999</div><div class="line">fmt.Println(d.b.base.department)</div><div class="line">fmt.Println(d.c.base.department)</div></pre></td></tr></table></figure>
-<h2 id="结构体组合"><a href="#结构体组合" class="headerlink" title="结构体组合"></a>结构体组合</h2><p>匿名组合</p>
-<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><h3 id="侵入性和非侵入性"><a href="#侵入性和非侵入性" class="headerlink" title="侵入性和非侵入性"></a>侵入性和非侵入性</h3><p>不同于java, C++ 这类接口我们称为侵入式接口。<br>“侵入式”的主要表现在于实现类需要明确声明自己实现了某个接口。</p>
-<p>这种强制性的接口继承是面向对象编程思想发展过程中<br>一个遭受相当多置疑的特性。</p>
-<h3 id="侵入式接口的两个问题"><a href="#侵入式接口的两个问题" class="headerlink" title="侵入式接口的两个问题"></a>侵入式接口的两个问题</h3><p>正是因为这种不合理的设计，实现Java、Csharp类库中的每个类时都需要纠结以下两个问题。<br> 问题1:我提供哪些接口好呢?<br> 问题2:如果两个类实现了相同的接口，应该把接口放到哪个包好呢?</p>
-<p>接口赋值的一个代码的例子</p>
-<ol>
-<li>接口包含两个方法其中一个值引用，一个地址引用，赋值变量应该用值还是地址?</li>
-<li>接口方法之间赋值，只要是子集，就可以赋值,并且顺序无关</li>
-</ol>
-<h2 id="接口查询接口组合"><a href="#接口查询接口组合" class="headerlink" title="接口查询接口组合"></a>接口查询接口组合</h2><p>只看类C代码实现</p>
-<h3 id="空接口-interface"><a href="#空接口-interface" class="headerlink" title="空接口  {}interface"></a>空接口  {}interface</h3><p>可以做泛型编程而不需要空指针</p>
-<h2 id="并发编程-go-routinue"><a href="#并发编程-go-routinue" class="headerlink" title="并发编程 go routinue"></a>并发编程 go routinue</h2><h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><p>Type 和 Value</p>
-<p>reflect.TypeOf()</p>
-<p>reflect.ValueOf() //这里是值拷贝 可以用CanSet()函数来判断</p>
-<p>所以要想得到理想的reflect工作流<br>需要首先  v = ValueOf(&amp;x) 但是地址是不能直接Set的，要 v.Elem() 之后再Set()</p>
-]]></content>
-      
-        <categories>
-            
-            <category> Golang </category>
             
         </categories>
         
