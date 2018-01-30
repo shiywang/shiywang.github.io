@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>字符串匹配问题之KMP算法的引出 | ⎈</title>
+  <meta name="author" content="Shiyang Wang">
+  
+  <meta name="description" content="问题(类似leetcode28)12345给定字符串S，和模式字符串PS: ABCXTTTTTABCDTTTTP: ABCDTTTT求模式串 P 在 S 中的位置 ?
+暴力解法如果用暴力匹配的思路，一个循环遍历串S,每次递增加1，如果字串和P匹配则返回。m是S串长度，n是P串长度,因为S串每次下标加">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="字符串匹配问题之KMP算法的引出"/>
+  <meta property="og:site_name" content="⎈"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="⎈" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">  
+  <link rel="stylesheet" href="/css/sidenav.css" media="screen" type="text/css">  
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+</head>
+
+<body id="body" data-spy="scroll" data-target=".toc">
+  <div class="container" id="container">
+	<div class="content">
+	  <div class="page-header">		
+  <h1><a class="brand" href="/">⎈</a><span class="split"></span><span class="title">字符串匹配问题之KMP算法的引出</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2018-01-30</span></h1>
+</div>		
+
+<div class="row page">
+  <!-- cols -->	
+  
+  
+
+  
+	<div class="col-md-12">
+	  
+
+	  <!-- content -->
+	  <h2 id="问题-类似leetcode28"><a href="#问题-类似leetcode28" class="headerlink" title="问题(类似leetcode28)"></a>问题(类似leetcode28)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">给定字符串S，和模式字符串P</div><div class="line">S: ABCXTTTTTABCDTTTT</div><div class="line">P: ABCDTTTT</div><div class="line"></div><div class="line">求模式串 P 在 S 中的位置 ?</div></pre></td></tr></table></figure>
+<h2 id="暴力解法"><a href="#暴力解法" class="headerlink" title="暴力解法"></a>暴力解法</h2><p>如果用暴力匹配的思路，一个循环遍历串S,每次递增加1，如果字串和P匹配则返回。m是S串长度，n是P串长度,因为S串每次下标加1移动，所以最多要比较<code>m*n</code>次,这里时间复杂度是<code>O(m*n)</code> 。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">func match(a, b string) bool &#123;</div><div class="line">	if len(a) &gt; len(b) &#123;</div><div class="line">		return false</div><div class="line">	&#125;</div><div class="line">	for i := 0; i &lt; len(a); i++ &#123;</div><div class="line">		if a[i] != b[i] &#123;</div><div class="line">			return false</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return true</div><div class="line">&#125;</div><div class="line"></div><div class="line">func search(pattern, str string) int &#123;</div><div class="line">	for i := 0; i &lt; len(str); i++ &#123;</div><div class="line">		if match(pattern, str[i:]) &#123;</div><div class="line">			return i</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	return -1</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Knuth–Morris–Pratt-KMP-算法的引入"><a href="#Knuth–Morris–Pratt-KMP-算法的引入" class="headerlink" title="Knuth–Morris–Pratt(KMP) 算法的引入"></a>Knuth–Morris–Pratt(KMP) 算法的引入</h2><p>从直觉上讲，如果ABC前三位匹配，后面我们可以直接比较后面的,像这样:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">下标:    123456789</div><div class="line">串S:     ABCXTTTTTABCDTTTT</div><div class="line">串P:        ABCDTTTT</div></pre></td></tr></table></figure></p>
+<p>而不是暴力的逻辑S字符串应该向后移动一位,和P比较,KMP其实就是这样去比较的，但是可以直接让串P右移动3位即可，这是为什么呢?</p>
+<p>如果我们假设P只需要移动一位就会有匹配</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ABCXTTTTTABCDTTTT</div><div class="line"> ABCDTTTT</div></pre></td></tr></table></figure>
+<p>可以有<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">已知条件: S[1-3] = P[1-3], 且 S[2-3] = P[1-2]  </div><div class="line"></div><div class="line">可以推出: ==&gt; S[1] = S[2] = S[3]， </div><div class="line"></div><div class="line">又因为前3位匹配，所以 ==&gt; P[1] = P[2] = P[3]</div></pre></td></tr></table></figure></p>
+<p>所以如果只移动一位，当且仅当匹配的三个元素都相同才可以,及这种情况  <code>AAA</code> <code>BBB</code> <code>XXX</code> 前三元素都相同才可以。</p>
+<p>如果我们假设匹配只需要移动两位<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ABCXTTTTTABCDTTTT</div><div class="line">  ABCDTTTT</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">已知条件: S[1-3] = P[1-3],  且 S[3] = P[1] </div><div class="line"></div><div class="line">可以推出: ==&gt; P[1] = P[3]</div></pre></td></tr></table></figure>
+<p>所以如果字符串是<code>ATA</code>，或者<code>ABA</code>, <code>AXA</code> 这种形式，可以移动两位</p>
+<h3 id="这样我们就发现了一个规律"><a href="#这样我们就发现了一个规律" class="headerlink" title="这样我们就发现了一个规律"></a>这样我们就发现了一个规律</h3><p><strong>对于前n位匹配的字符串，如果存在前缀和后缀相等，那么移动:</strong></p>
+<p><code>len(n)- len(最长前后缀)</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ABC 最长前后缀长度为 0  所以移动 3-0 = 3 </div><div class="line">AAA 最长前后缀长度为 2  所以移动 3-2 = 1</div><div class="line">ATA 最长前后缀长度为 1  所以移动 3-1 = 2</div></pre></td></tr></table></figure>
+<p>这样我们可以看出，只要算出当前匹配的P子串，的最长前后缀个数，就可以求出移动距离，而不需要每次让S串只移动1位去匹配了。</p>
+	  
+
+	  <div>
+  		<center>
+		  <div class="pagination">
+<ul class="pagination">
+	
+	
+	
+	
+	
+	
+		
+			
+			
+		
+	
+		
+			
+			
+			
+		
+	
+		
+	
+		
+	
+		
+	
+	
+	
+		<li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+	<li><a href="/"><i class="fa fa-archive"></i>Home</a></li>
+	
+		<li class="next"><a href="/2018/01/19/dynamic_programming101/" class="alignright next">next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+	
+</ul>
+</div>
+
+		</center>
+	  </div>
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+	
+  </div><!-- row -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+	<footer> <p>
+  &copy; 2018 Shiyang Wang
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-wixo/">Wixo</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.tableofcontents.min.js"></script>
+<script src="/js/tocgenerator.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+</body>
+</html>
