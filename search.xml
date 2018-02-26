@@ -3,6 +3,44 @@
   
     
     <entry>
+      <title><![CDATA[Some of my thougts about <<The Open Organization>>]]></title>
+      <url>/2018/02/26/thought-about-open-source/</url>
+      <content type="html"><![CDATA[<h2 id="Some-of-my-thought-about-Red-Hat-amp-amp-The-Open-Organization"><a href="#Some-of-my-thought-about-Red-Hat-amp-amp-The-Open-Organization" class="headerlink" title="Some of my thought about Red Hat &amp;&amp; The Open Organization"></a>Some of my thought about Red Hat &amp;&amp; The Open Organization</h2><h4 id="The-benefit-of-Open-Source-and-Open-Organization"><a href="#The-benefit-of-Open-Source-and-Open-Organization" class="headerlink" title="The benefit of Open Source and Open Organization"></a>The benefit of Open Source and Open Organization</h4><p>The most significant misunderstanding of open source is “Tom Sawyer” model[1] of collaboration: you staring at your own pieces of “cake”, and wish people could jump into and help you instead of helping each other to make the whole “cake” bigger so everyone could be benefit from it. Red Hat is the latter one: to be the catalyst in communities of customers, contributors, and partners creating better technology the open source way.</p>
+<p>Being catalyst is an insightful thinking which need truly collaboration from different organizations who willing to give up their own “shrewdness” and work together. To be honest, I don’t know what’s the future of open source will be like, just like I don’t know when human could colonize Mars, but I firmly believe we will be there someday.</p>
+<p>There may have an inaccurate metaphor in my humble opinion to support my believe, the open source way qualified sharing economy: connection is more important than ownership, collaboration make resource being shared to make the society more efficient. Think about airbnb, uber, google, facebook… they doesn’t own contents/properties, but they have the connections. sharing software is build a community provide an open space/connections for people to share intellectual properties, ideas, contributions from different countries, corporations. It will definitely lowering the cost of software development cost, making the products more creativity, make hard problems being solved, is about making the world more efficient, making the “cake” more bigger in a holistic view.</p>
+<h3 id="Top-Down-vs-Bottom-Up"><a href="#Top-Down-vs-Bottom-Up" class="headerlink" title="Top Down vs Bottom Up"></a>Top Down vs Bottom Up</h3><p>Top Down hierarchy works for traditional company which the environment and goal is stable enough and everyone need to do is just follow the “correct” order do it efficiently, But Bottom up hierarchy works for company need creativity, fast move which means the environment and goal cannot be easily foresee.</p>
+<p>This make me remind a example of the Chinese Civil War[2], the The Communist Party of China(CPC) win the war against Kuomintang-led government(KMT), the reason could be explained by “Top Down vs Bottom Up” theory, KMT uses Top Down hierarchy which seems more efficiency, but it could be have a serval problem in war when the communication in the hierarchy get cutted. But Bottom Up hierarchy is make sure everyone even those farmers, workers understand what they fighting for and why (land reform) and have the inner momentum to fight fiercely even there’s no one giving them order.</p>
+<h3 id="Creativity"><a href="#Creativity" class="headerlink" title="Creativity"></a>Creativity</h3><p>Previously, my understanding of creativity is narrowed: I always thought creativity is only to be some scientist pops up some brilliant ideas, or win some new fundamental finding price in science, or some big corporation invent some new intellectual patents. But I was wrong, actually creativity is everywhere, think about apple, each release of the iphone, the new product blows everybody’s mind, and then everyone starts to follow, turn out being the number one of the industry need creativity. so as Red Hat, we being the number one company of open source industry, everything we do will impact the open source community, and if we being creative enough, that open source could have the chance to be gleaming.</p>
+<h3 id="Freedom-Openness-Diversity"><a href="#Freedom-Openness-Diversity" class="headerlink" title="Freedom, Openness, Diversity"></a>Freedom, Openness, Diversity</h3><p>Freedom, Openness and Diversity is the catalyst of creativity. Imagine what scientific research world would be like without freedom, openness and diversity: political interference will lead to scientific fraud, benefit-oriented interference will lead to we miss some of potential evolutionary inventions. Think about MIT media labs which was originally form by some marginalized but talented professors whose research is not that “beneficial enough”, and the MIT give them a chance to form their own lab and boom: touchscreen, electronic ink, scratch programming design for kids, artificial prosthesis, wearable device, GPS vehicle tracking system etc all comes from media lab which are incredible inventions. Imagine each countries scientist/engineer all incarcerated in their own country, never had a chance to having an open discussions/conference. As second industrial revolution past almost hundred year, the scientific/engineering problems we tackling are way more difficult and complicated than anything before, so having a freedom, openness, diversity environment to collaboration is important. And I have to admit, for this area, US as an ethnic melt pot is way more advanced than any other countries.</p>
+<h3 id="The-reason-why-I-want-to-work-for-Red-Hat-and-in-US"><a href="#The-reason-why-I-want-to-work-for-Red-Hat-and-in-US" class="headerlink" title="The reason why I want to work for Red Hat and in US"></a>The reason why I want to work for Red Hat and in US</h3><p>First, I want to explain couples reason about why I want to work in US, especially in Raleigh.</p>
+<ol>
+<li><p>Work reason:<br>  1.1 my kubernetes community background/experience is cli &amp;&amp; api-machinery, I have some collaboration with Clayton, Jordan, David, Juan, and if I have the chance to face to face communicate with them, that would be more efficiency. Also Clayton, Jordan, David they’re like my role models from all perspective, it would be really valuable even if I could have the chance to chatting with them during the lunch time or casual time. collaborate with brilliant people and observe their behaviours is a great way to improve yourself.</p>
+</li>
+<li><p>Life reason: </p>
+<p>  2.1 I have three cousins work and live in US, since the one-child policy[3], two of them are really close to me just like brother and sisters.</p>
+<p>  2.2  Personality/culture influences, I’m kind of a rebel since I was in school, I always want to stand up and speak up, but maybe due to the chinese/confucius culture influences, I don’t have many chances to do that. Sometimes confucius philosophy is not bad, but there’s a couple of common bad habits I been observed during the 20 years I grew up in this place: 1.Lack of compassion and empathy 2.Hive mind, subordinate thinking 3.Put money above all. But I’m not saying US is the greatest, and china is horrible, US do has a lot of problems from my online observation on youtube[4][5]. But one of my expat friend really inspired me by told me: “You have to be truly experienced two different cultures to be really open minded and decide where’s the best place you want to fit in.”</p>
+<p>  2.3 I love music and most of my favorite bands/singers are from US and there’s definitely fewer concert in China here, Raleigh is close to Tennessee : )</p>
+</li>
+</ol>
+<p>Second, the reason I think Red Hat is a good work place for me.</p>
+<p>   “Everyone can build their own impact in the organization” I vaguely remember there’s a sentence exist in the book and that was really fascinating to me. Life is not just about making money, taking care families(I mean future families not my divorced parents), building impact, be open minded, helping others are more important to me… I love coding, but I’m not a chinese nerdy guy who only can code, and I do have some other potential abilities like public speaking, volunteering, chinese/asian culture background… could be benefit company in the future. So I’m not trying to persuade you guys, I know there might be some cost prohibitive reason. I just want to make sure you guys understand my work/life expectations/goals and my potential values to make a comprehensive assessment. And Brno is also a great place for me to work for couple years, I knew there’re also a lot of brilliant people there that is totally acceptable for me if there’re opportunities and I belive Red Hat is a meritocracy company.</p>
+<p>[1] <a href="https://opensource.com/business/09/9/tom-sawyer-whitewashing-fences-and-building-communities-online" target="_blank" rel="external">https://opensource.com/business/09/9/tom-sawyer-whitewashing-fences-and-building-communities-online</a></p>
+<p>[2] <a href="https://en.wikipedia.org/wiki/Chinese_Civil_War" target="_blank" rel="external">https://en.wikipedia.org/wiki/Chinese_Civil_War</a></p>
+<p>[3] <a href="https://en.wikipedia.org/wiki/One-child_policy" target="_blank" rel="external">https://en.wikipedia.org/wiki/One-child_policy</a></p>
+<p>[4] <a href="https://en.wikipedi.org/wiki/Last_Week_Tonight_with_John_Oliver" target="_blank" rel="external">https://en.wikipedi.org/wiki/Last_Week_Tonight_with_John_Oliver</a></p>
+<p>[5] <a href="https://en.wikipedia.org/wiki/The_Philip_DeFranco_Show" target="_blank" rel="external">https://en.wikipedia.org/wiki/The_Philip_DeFranco_Show</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> thinking </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[字符串匹配问题之KMP算法的引出]]></title>
       <url>/2018/01/31/kmp/</url>
       <content type="html"><![CDATA[<h2 id="问题-类似leetcode28"><a href="#问题-类似leetcode28" class="headerlink" title="问题(类似leetcode28)"></a>问题(类似leetcode28)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">给定字符串S，和模式字符串P</div><div class="line">S: ABCXTTTTTABCDTTTT</div><div class="line">P: ABCDTTTT</div><div class="line"></div><div class="line">求模式串 P 在 S 中的位置 ?</div></pre></td></tr></table></figure>
@@ -93,6 +131,53 @@
         <categories>
             
             <category> thinking </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[读书笔记:《Go语言编程》]]></title>
+      <url>/2018/01/17/golang1/</url>
+      <content type="html"><![CDATA[<h2 id="《Go语言编程》读书笔记"><a href="#《Go语言编程》读书笔记" class="headerlink" title="《Go语言编程》读书笔记"></a>《Go语言编程》读书笔记</h2><h2 id="顺序编程"><a href="#顺序编程" class="headerlink" title="顺序编程"></a>顺序编程</h2><h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>同是静态类型语言的Go作用域和C语言类似，虽然变量在栈上(stack)还是堆上(heap)是由编译器决定，这点和C语言用户自己决定不一样，但是作用于访问还是类似的，比如如下代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">func f() &#123;</div><div class="line">	n := 999;</div><div class="line">	...</div><div class="line">&#125;</div><div class="line"></div><div class="line">fmt.Println(n) //这里是不能访问一个函数内的变量的</div></pre></td></tr></table></figure></p>
+<p>但是golang支持闭包，所以这样是可以的:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">func f() func()int &#123;</div><div class="line">	n := 999;</div><div class="line">	return func() int&#123;</div><div class="line">		return n</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">func main() &#123;</div><div class="line">	f1 := f()</div><div class="line">	fmt.Println(f1())</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>闭包的简单定义是<code>能够读取其他函数内部变量的函数</code>,并且这里函数内的变量<code>n</code>一定是在堆上，这点C语言是没办法做到的，除非堆上malloc一个变量。</p>
+<h2 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h2><h2 id="类型系统"><a href="#类型系统" class="headerlink" title="类型系统"></a>类型系统</h2><p>类型系统里比较重要的两个概念<code>Pass By Reference</code>和 <code>Pass By Value</code>。<br>在C语言里处理数组在函数传递的时候比较特别是<code>Pass By Reference</code>,其他对象都是<code>Pass By Value</code> 结构体里的数组也不例外，在C语言中如下是等价的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">如果函数是test(a), a 是一个数组</div><div class="line">void test(int * p) &#123;</div><div class="line">    *(p+1) = 1;</div><div class="line">&#125; </div><div class="line"></div><div class="line">void test(int p[]) &#123;</div><div class="line">    p[1] = 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后Go语言这点不太一样数组是<code>Pass By Reference</code>的。然后Go语言引入了一种叫做切片(Slice)的类型,这个有点像C的数组，切片和数组看起来十分形似，唯一的区别实在声明的时候：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//That is a slice:</div><div class="line">var av = []int&#123;1,5,2,3,7&#125;</div><div class="line"></div><div class="line">//And those are arrays:</div><div class="line">var av = [...]int&#123;1,5,2,3,7&#125;</div><div class="line">var bv = [5]int&#123;1,5,2,3,7&#125;</div></pre></td></tr></table></figure></p>
+<p>另外数组可以转换成切片通过这个方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sli := arr[:]</div></pre></td></tr></table></figure></p>
+<h4 id="Go语言有四种特殊的类型通常是看作Pass-by-Reference的"><a href="#Go语言有四种特殊的类型通常是看作Pass-by-Reference的" class="headerlink" title="Go语言有四种特殊的类型通常是看作Pass by Reference的"></a>Go语言有四种特殊的类型通常是看作<code>Pass by Reference</code>的</h4><ol>
+<li>切片(Slice)</li>
+<li>接口(Interface)</li>
+<li>Map</li>
+<li>Channel</li>
+</ol>
+<h2 id="结构体部分"><a href="#结构体部分" class="headerlink" title="结构体部分"></a>结构体部分</h2><p>匿名引用指针和值引用的区别</p>
+<p>C++的虚基类引出区别,首先讲一下虚基类</p>
+<p><img src="virtualbase.jpg" alt=""></p>
+<p>在C++中如果基类A分支出两个子类B和C，然后孙子类D同时又继承了B和C,这时基类A中有有一个成员变量是一个公共的属性，比如department,而孙子类既然享受了继承的好处，但是如果想调用name的话编译器会又一个问题，就是不知道是用从那个分支继承下来的成员变量，这个时候如果这个department一个大家共用的属性,这样多重继承下来不仅有数据冗余同时还要每次显示告诉编译器使用从那个分支继承下来的变量，非常麻烦，C++在这里引入了虚继类的概念<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">class A&#123;</div><div class="line">protected:</div><div class="line">    int department;</div><div class="line">&#125;;</div><div class="line">//直接基类B</div><div class="line">class B: virtual public A&#123;  //虚继承</div><div class="line">protected:</div><div class="line">    int department;</div><div class="line">&#125;;</div><div class="line">//直接基类C</div><div class="line">class C: virtual public A&#123;  //虚继承</div><div class="line">protected:</div><div class="line">    int department;</div><div class="line">&#125;;</div><div class="line">//派生类D</div><div class="line">class D: public B, public C&#123;</div></pre></td></tr></table></figure></p>
+<p>这样这里的department其实就只有一份，不管哪里的修改都是对A的department进行修改，其实原理也很简单，就是用指针，然后大家都共享A变量的那一块内存就行了呗,Go在这里的实现非常的直白</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">type A struct &#123;</div><div class="line">	department int</div><div class="line">&#125;</div><div class="line"></div><div class="line">type B struct &#123;</div><div class="line">	base *A</div><div class="line">&#125;</div><div class="line"></div><div class="line">type C struct &#123;</div><div class="line">	base *A</div><div class="line">&#125;</div><div class="line"></div><div class="line">type D struct &#123;</div><div class="line">	b B</div><div class="line">	c C</div><div class="line">&#125;</div><div class="line"></div><div class="line">var d = new(D)</div><div class="line">d.b.base = new(A)</div><div class="line">d.c.base = d.b.base //都是同一块内存指向</div><div class="line">d.b.base.department = 999</div><div class="line">fmt.Println(d.b.base.department)</div><div class="line">fmt.Println(d.c.base.department)</div></pre></td></tr></table></figure>
+<h2 id="结构体组合"><a href="#结构体组合" class="headerlink" title="结构体组合"></a>结构体组合</h2><p>匿名组合</p>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><h3 id="侵入性和非侵入性"><a href="#侵入性和非侵入性" class="headerlink" title="侵入性和非侵入性"></a>侵入性和非侵入性</h3><p>不同于java, C++ 这类接口我们称为侵入式接口。<br>“侵入式”的主要表现在于实现类需要明确声明自己实现了某个接口。</p>
+<p>这种强制性的接口继承是面向对象编程思想发展过程中<br>一个遭受相当多置疑的特性。</p>
+<h3 id="侵入式接口的两个问题"><a href="#侵入式接口的两个问题" class="headerlink" title="侵入式接口的两个问题"></a>侵入式接口的两个问题</h3><p>正是因为这种不合理的设计，实现Java、Csharp类库中的每个类时都需要纠结以下两个问题。<br> 问题1:我提供哪些接口好呢?<br> 问题2:如果两个类实现了相同的接口，应该把接口放到哪个包好呢?</p>
+<p>接口赋值的一个代码的例子</p>
+<ol>
+<li>接口包含两个方法其中一个值引用，一个地址引用，赋值变量应该用值还是地址?</li>
+<li>接口方法之间赋值，只要是子集，就可以赋值,并且顺序无关</li>
+</ol>
+<h2 id="接口查询接口组合"><a href="#接口查询接口组合" class="headerlink" title="接口查询接口组合"></a>接口查询接口组合</h2><p>只看类C代码实现</p>
+<h3 id="空接口-interface"><a href="#空接口-interface" class="headerlink" title="空接口  {}interface"></a>空接口  {}interface</h3><p>可以做泛型编程而不需要空指针</p>
+<h2 id="并发编程-go-routinue"><a href="#并发编程-go-routinue" class="headerlink" title="并发编程 go routinue"></a>并发编程 go routinue</h2><h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><p>Type 和 Value</p>
+<p>reflect.TypeOf()</p>
+<p>reflect.ValueOf() //这里是值拷贝 可以用CanSet()函数来判断</p>
+<p>所以要想得到理想的reflect工作流<br>需要首先  v = ValueOf(&amp;x) 但是地址是不能直接Set的，要 v.Elem() 之后再Set()</p>
+]]></content>
+      
+        <categories>
+            
+            <category> Golang </category>
             
         </categories>
         
@@ -200,53 +285,6 @@
         <categories>
             
             <category> thinking </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[读书笔记:《Go语言编程》]]></title>
-      <url>/2018/01/17/golang1/</url>
-      <content type="html"><![CDATA[<h2 id="《Go语言编程》读书笔记"><a href="#《Go语言编程》读书笔记" class="headerlink" title="《Go语言编程》读书笔记"></a>《Go语言编程》读书笔记</h2><h2 id="顺序编程"><a href="#顺序编程" class="headerlink" title="顺序编程"></a>顺序编程</h2><h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p>同是静态类型语言的Go作用域和C语言类似，虽然变量在栈上(stack)还是堆上(heap)是由编译器决定，这点和C语言用户自己决定不一样，但是作用于访问还是类似的，比如如下代码:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">func f() &#123;</div><div class="line">	n := 999;</div><div class="line">	...</div><div class="line">&#125;</div><div class="line"></div><div class="line">fmt.Println(n) //这里是不能访问一个函数内的变量的</div></pre></td></tr></table></figure></p>
-<p>但是golang支持闭包，所以这样是可以的:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">func f() func()int &#123;</div><div class="line">	n := 999;</div><div class="line">	return func() int&#123;</div><div class="line">		return n</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">func main() &#123;</div><div class="line">	f1 := f()</div><div class="line">	fmt.Println(f1())</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>闭包的简单定义是<code>能够读取其他函数内部变量的函数</code>,并且这里函数内的变量<code>n</code>一定是在堆上，这点C语言是没办法做到的，除非堆上malloc一个变量。</p>
-<h2 id="面向对象编程"><a href="#面向对象编程" class="headerlink" title="面向对象编程"></a>面向对象编程</h2><h2 id="类型系统"><a href="#类型系统" class="headerlink" title="类型系统"></a>类型系统</h2><p>类型系统里比较重要的两个概念<code>Pass By Reference</code>和 <code>Pass By Value</code>。<br>在C语言里处理数组在函数传递的时候比较特别是<code>Pass By Reference</code>,其他对象都是<code>Pass By Value</code> 结构体里的数组也不例外，在C语言中如下是等价的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">如果函数是test(a), a 是一个数组</div><div class="line">void test(int * p) &#123;</div><div class="line">    *(p+1) = 1;</div><div class="line">&#125; </div><div class="line"></div><div class="line">void test(int p[]) &#123;</div><div class="line">    p[1] = 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>然后Go语言这点不太一样数组是<code>Pass By Reference</code>的。然后Go语言引入了一种叫做切片(Slice)的类型,这个有点像C的数组，切片和数组看起来十分形似，唯一的区别实在声明的时候：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">//That is a slice:</div><div class="line">var av = []int&#123;1,5,2,3,7&#125;</div><div class="line"></div><div class="line">//And those are arrays:</div><div class="line">var av = [...]int&#123;1,5,2,3,7&#125;</div><div class="line">var bv = [5]int&#123;1,5,2,3,7&#125;</div></pre></td></tr></table></figure></p>
-<p>另外数组可以转换成切片通过这个方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sli := arr[:]</div></pre></td></tr></table></figure></p>
-<h4 id="Go语言有四种特殊的类型通常是看作Pass-by-Reference的"><a href="#Go语言有四种特殊的类型通常是看作Pass-by-Reference的" class="headerlink" title="Go语言有四种特殊的类型通常是看作Pass by Reference的"></a>Go语言有四种特殊的类型通常是看作<code>Pass by Reference</code>的</h4><ol>
-<li>切片(Slice)</li>
-<li>接口(Interface)</li>
-<li>Map</li>
-<li>Channel</li>
-</ol>
-<h2 id="结构体部分"><a href="#结构体部分" class="headerlink" title="结构体部分"></a>结构体部分</h2><p>匿名引用指针和值引用的区别</p>
-<p>C++的虚基类引出区别,首先讲一下虚基类</p>
-<p><img src="virtualbase.jpg" alt=""></p>
-<p>在C++中如果基类A分支出两个子类B和C，然后孙子类D同时又继承了B和C,这时基类A中有有一个成员变量是一个公共的属性，比如department,而孙子类既然享受了继承的好处，但是如果想调用name的话编译器会又一个问题，就是不知道是用从那个分支继承下来的成员变量，这个时候如果这个department一个大家共用的属性,这样多重继承下来不仅有数据冗余同时还要每次显示告诉编译器使用从那个分支继承下来的变量，非常麻烦，C++在这里引入了虚继类的概念<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">class A&#123;</div><div class="line">protected:</div><div class="line">    int department;</div><div class="line">&#125;;</div><div class="line">//直接基类B</div><div class="line">class B: virtual public A&#123;  //虚继承</div><div class="line">protected:</div><div class="line">    int department;</div><div class="line">&#125;;</div><div class="line">//直接基类C</div><div class="line">class C: virtual public A&#123;  //虚继承</div><div class="line">protected:</div><div class="line">    int department;</div><div class="line">&#125;;</div><div class="line">//派生类D</div><div class="line">class D: public B, public C&#123;</div></pre></td></tr></table></figure></p>
-<p>这样这里的department其实就只有一份，不管哪里的修改都是对A的department进行修改，其实原理也很简单，就是用指针，然后大家都共享A变量的那一块内存就行了呗,Go在这里的实现非常的直白</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">type A struct &#123;</div><div class="line">	department int</div><div class="line">&#125;</div><div class="line"></div><div class="line">type B struct &#123;</div><div class="line">	base *A</div><div class="line">&#125;</div><div class="line"></div><div class="line">type C struct &#123;</div><div class="line">	base *A</div><div class="line">&#125;</div><div class="line"></div><div class="line">type D struct &#123;</div><div class="line">	b B</div><div class="line">	c C</div><div class="line">&#125;</div><div class="line"></div><div class="line">var d = new(D)</div><div class="line">d.b.base = new(A)</div><div class="line">d.c.base = d.b.base //都是同一块内存指向</div><div class="line">d.b.base.department = 999</div><div class="line">fmt.Println(d.b.base.department)</div><div class="line">fmt.Println(d.c.base.department)</div></pre></td></tr></table></figure>
-<h2 id="结构体组合"><a href="#结构体组合" class="headerlink" title="结构体组合"></a>结构体组合</h2><p>匿名组合</p>
-<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><h3 id="侵入性和非侵入性"><a href="#侵入性和非侵入性" class="headerlink" title="侵入性和非侵入性"></a>侵入性和非侵入性</h3><p>不同于java, C++ 这类接口我们称为侵入式接口。<br>“侵入式”的主要表现在于实现类需要明确声明自己实现了某个接口。</p>
-<p>这种强制性的接口继承是面向对象编程思想发展过程中<br>一个遭受相当多置疑的特性。</p>
-<h3 id="侵入式接口的两个问题"><a href="#侵入式接口的两个问题" class="headerlink" title="侵入式接口的两个问题"></a>侵入式接口的两个问题</h3><p>正是因为这种不合理的设计，实现Java、Csharp类库中的每个类时都需要纠结以下两个问题。<br> 问题1:我提供哪些接口好呢?<br> 问题2:如果两个类实现了相同的接口，应该把接口放到哪个包好呢?</p>
-<p>接口赋值的一个代码的例子</p>
-<ol>
-<li>接口包含两个方法其中一个值引用，一个地址引用，赋值变量应该用值还是地址?</li>
-<li>接口方法之间赋值，只要是子集，就可以赋值,并且顺序无关</li>
-</ol>
-<h2 id="接口查询接口组合"><a href="#接口查询接口组合" class="headerlink" title="接口查询接口组合"></a>接口查询接口组合</h2><p>只看类C代码实现</p>
-<h3 id="空接口-interface"><a href="#空接口-interface" class="headerlink" title="空接口  {}interface"></a>空接口  {}interface</h3><p>可以做泛型编程而不需要空指针</p>
-<h2 id="并发编程-go-routinue"><a href="#并发编程-go-routinue" class="headerlink" title="并发编程 go routinue"></a>并发编程 go routinue</h2><h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><p>Type 和 Value</p>
-<p>reflect.TypeOf()</p>
-<p>reflect.ValueOf() //这里是值拷贝 可以用CanSet()函数来判断</p>
-<p>所以要想得到理想的reflect工作流<br>需要首先  v = ValueOf(&amp;x) 但是地址是不能直接Set的，要 v.Elem() 之后再Set()</p>
-]]></content>
-      
-        <categories>
-            
-            <category> Golang </category>
             
         </categories>
         
