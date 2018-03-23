@@ -3,6 +3,37 @@
   
     
     <entry>
+      <title><![CDATA[list 2018]]></title>
+      <url>/2018/03/23/2018list/</url>
+      <content type="html"><![CDATA[<ol>
+<li><p>Reading/Working efficiencies (Iteration1)</p>
+</li>
+<li><p>Phonetics,Pronunciation(Iteration2),My current grammatically error is low.</p>
+</li>
+<li><p>ankidroid, at least 10 books reading</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">1.Benjamin Franklin Biography</div><div class="line">2.</div><div class="line">3.</div><div class="line">4.</div><div class="line">5.</div><div class="line">6.</div><div class="line">7.</div><div class="line">8.</div><div class="line">9.</div><div class="line">10. 红楼梦</div></pre></td></tr></table></figure>
+</li>
+<li><p>Rotaract Events: become some of events organizer, or at least participate event organization.</p>
+</li>
+<li><p>Linux (RHCE) low</p>
+</li>
+<li><p>algorithm<br>1.1 dynamic programming (做一个slide 分享) done<br>1.2 data struct (leetcode 练习)  discard</p>
+</li>
+<li><p>guitar practice  low, maybe it depends</p>
+</li>
+</ol>
+]]></content>
+      
+        <categories>
+            
+            <category> thinking </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[Some of my thoughts about Red Hat <<The Open Organization>>]]></title>
       <url>/2018/03/23/thought-about-open-source/</url>
       <content type="html"><![CDATA[<h3 id="The-benefit-of-Open-Source-and-Open-Organization"><a href="#The-benefit-of-Open-Source-and-Open-Organization" class="headerlink" title="The benefit of Open Source and Open Organization"></a>The benefit of Open Source and Open Organization</h3><p>The most significant misunderstanding of open source is “Tom Sawyer” model[1] of collaborations: you stare at your own pieces of “cake”, and wish people could jump in and help you instead of helping each other to make the whole “cake” bigger so everyone could be benefit from it. Red Hat is the latter one: to be the catalyst in communities of customers, contributors, and partners creating better technology the open source way.</p>
@@ -31,38 +62,6 @@
 <p>[3] <a href="https://en.wikipedia.org/wiki/One-child_policy" target="_blank" rel="external">https://en.wikipedia.org/wiki/One-child_policy</a></p>
 <p>[4] <a href="https://en.wikipedia.org/wiki/Last_Week_Tonight_with_John_Oliver" target="_blank" rel="external">https://en.wikipedia.org/wiki/Last_Week_Tonight_with_John_Oliver</a></p>
 <p>[5] <a href="https://en.wikipedia.org/wiki/The_Philip_DeFranco_Show" target="_blank" rel="external">https://en.wikipedia.org/wiki/The_Philip_DeFranco_Show</a></p>
-]]></content>
-      
-        <categories>
-            
-            <category> thinking </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[list 2018]]></title>
-      <url>/2018/03/15/2018list/</url>
-      <content type="html"><![CDATA[<ol>
-<li><p>高效工作/阅读 的习惯养成</p>
-</li>
-<li><p>音标,发音  </p>
-</li>
-<li><p>词汇 ankidroid, reading books</p>
-</li>
-<li><p>Rotaract Events: talk to peopole</p>
-</li>
-<li><p>Linux (RHCE)  low </p>
-</li>
-<li><p>算法<br>1.1 动态规划 (做一个slide 分享) done<br>1.2 数据结构 (leetcode 练习)  discard</p>
-</li>
-</ol>
-<ol>
-<li>guitar practice  low, maybe it depends</li>
-</ol>
-<p><del>~8. 数学有几本书需要读  discard</del>~</p>
 ]]></content>
       
         <categories>
