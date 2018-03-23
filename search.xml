@@ -3,6 +3,46 @@
   
     
     <entry>
+      <title><![CDATA[Some of my thoughts about Red Hat <<The Open Organization>>]]></title>
+      <url>/2018/03/23/thought-about-open-source/</url>
+      <content type="html"><![CDATA[<h3 id="The-benefit-of-Open-Source-and-Open-Organization"><a href="#The-benefit-of-Open-Source-and-Open-Organization" class="headerlink" title="The benefit of Open Source and Open Organization"></a>The benefit of Open Source and Open Organization</h3><p>The most significant misunderstanding of open source is “Tom Sawyer” model[1] of collaborations: you stare at your own pieces of “cake”, and wish people could jump in and help you instead of helping each other to make the whole “cake” bigger so everyone could be benefit from it. Red Hat is the latter one: to be the catalyst in communities of customers, contributors, and partners creating better technology the open source way.</p>
+<p>Being catalyst is an insightful thinking which need truly collaborations from different organizations who willing to give up their own “shrewdness” and work together. To be honest, I don’t know what’s the future of open source will be like, just like I don’t know when human could colonize Mars, but I firmly believe we will be there someday.</p>
+<p>There may have an inaccurate metaphor in my humble opinion to support my belief, the open source way qualified sharing economy: connection is more important than ownership, collaborations make resource being shared to make the society more efficient. Think about Airbnb, Uber, Google, Facebook… they don’t own contents/properties, but they have the connections. Sharing software is build a community provide an open space/connections for people to share intellectual properties, ideas, contributions from different countries, corporations. It will definitely lower the cost of software development cost, making the products more creativity, make hard problems being solved, is about making the world more efficient, making the “cake” bigger in a holistic view.</p>
+<h3 id="Top-Down-vs-Bottom-Up"><a href="#Top-Down-vs-Bottom-Up" class="headerlink" title="Top Down vs Bottom Up"></a>Top Down vs Bottom Up</h3><p>Top Down hierarchy works for traditional company which the environment and goal is stable enough and everyone need to do is just follow the “correct” order do it efficiently, But Bottom up hierarchy works for company need creativity, fast move which means the environment and goal cannot be easily foreseen.</p>
+<p>This make me remind an example of the Chinese Civil War[2], The Communist Party of China(CPC) win the war against Kuomintang-led government(KMT), the reason could be explained by “Top Down vs Bottom Up” theory, KMT uses Top Down hierarchy which seems more efficiency, but it could be had a severe problem during the war when the communication in the hierarchy being blocked. But Bottom Up hierarchy is make sure everyone even poor peasants and workers understand what they fight for and why (farmland reform) and have the inner momentum to fight fiercely even there’s no one giving them order. (igniting their passion)</p>
+<h3 id="Creativity"><a href="#Creativity" class="headerlink" title="Creativity"></a>Creativity</h3><p>Previously, my understanding of creativity is narrowed: I always thought creativity is only some scientists pops up some brilliant ideas, or win some new fundamental finding prize in science, or some big corporation invent some new intellectual patents. But I was wrong, actually creativity is everywhere, think about apple, each release of the iPhone, the new product blows everybody’s mind, and then everyone starts to follow, turn out being the number one of the industry need creativity. So as Red Hat, we being the number one company of open source industry, everything we do will impact the open source community, and if we being creative enough, that open source could have the chance to be more glorious.</p>
+<h3 id="Freedom-Openness-Diversity"><a href="#Freedom-Openness-Diversity" class="headerlink" title="Freedom, Openness, Diversity"></a>Freedom, Openness, Diversity</h3><p>Freedom, Openness and Diversity is the catalyst of creativity. Imagine what if scientific research world would be like without freedom, openness and diversity: political interference will lead to scientific fraud, benefit-oriented interference will lead to we miss some potential evolutionary inventions. Think about MIT media labs which was originally formed by some marginalized but talented professors whose research is not that “beneficial enough”, and the MIT give them a chance to form their own lab and boom: touchscreen, electronic ink, scratch programming design for kids, artificial prosthesis, wearable device, GPS vehicle tracking system etc all comes from media lab which are incredible inventions. Imagine each countries’ scientist/engineer all incarcerated in their own countries, never had the chance to have an open discussion/conference. As second industrial revolution passed almost a hundred year, the scientific/engineering problems we are tackling are way more difficult and complicated than anything before, so having a freedom, openness, diversity environment to collaborations are important. And I have to admit, for this area, US as an ethnic melt pot is way more advanced than any other countries.</p>
+<h3 id="Hybrid-cloud-model-and-container-battle"><a href="#Hybrid-cloud-model-and-container-battle" class="headerlink" title="Hybrid cloud model and container battle"></a>Hybrid cloud model and container battle</h3><p>TODO</p>
+<h3 id="The-reason-why-I-want-to-work-for-Red-Hat-and-in-US"><a href="#The-reason-why-I-want-to-work-for-Red-Hat-and-in-US" class="headerlink" title="The reason why I want to work for Red Hat and in US"></a>The reason why I want to work for Red Hat and in US</h3><p>First, I want to explain couple reasons about why I want to work in US, especially in Raleigh.</p>
+<ol>
+<li><p>Work reason:<br> 1.1 My Kubernetes community background/experience is #sig-cli and #sig-api-machinery, I have some collaborations with Clayton, Jordan, David, Juan, and if I have the chance to face to face communicate with them, that would be more efficiency. Also, Clayton, Jordan, David they’re like my role models from all perspective, it would be really valuable even if I could have the chance to chatting with them during the lunchtime or casual time. Collaborate with brilliant people and observe their behaviors is a great way to improve yourself.</p>
+</li>
+<li><p>Life reason:</p>
+<p> 2.1 I have three cousins work and live in US, since the one-child policy[3], two of them are really close to me just like brother and sisters.</p>
+<p> 2.2 Personalities/culture influences, I’m kind of rebel since I was in school, I always want to stand up and speak up, but maybe due to the Chinese/Confucius culture influences, I don’t have many chances to do that. Sometimes Confucius philosophy is good, but there’s a couple of common bad habits I been observed during the 20 years I grew up in this land: 1. Lack of compassion and empathy 2. Hive mind, subordinate thinking 3. Put money above all. But I’m not saying US is the greatest, and china is horrible, US do has a lot of problems from my online observation on YouTube[4][5]. But one of my expat friend really inspired me by told me: “You have to be truly experienced two different cultures to be really open-minded and decide where’s the best place you want to fit in.”</p>
+<p> 2.3 I love music and most of my favorite bands/singers are from US and there’re definitely fewer concerts in China here, Raleigh is close to Tennessee : )</p>
+</li>
+</ol>
+<p>Second, the reason I think Red Hat is a good work place for me.</p>
+<p>‘“Everyone can build their own impact in the open organization”’ I vaguely remember this sentence exist in the book and that was really fascinating to me. Life is not just about making money. Taking care family, building impact, be open-minded, helping others are more important to me… I love coding, but I’m not a Chinese nerdy guy who only can code, and I do have some other potential abilities like public speaking, volunteering, Chinese/Asian culture background… could be beneficial to company in the future. </p>
+<h3 id="But-it’s-not-necessary-in-a-short-term"><a href="#But-it’s-not-necessary-in-a-short-term" class="headerlink" title="But it’s not necessary in a short term"></a>But it’s not necessary in a short term</h3><p>So I’m not trying to persuade you guys, I know there might be some cost prohibitive reasons for a none-senior engineer to relocate and I totally understand. I just want to make sure you guys understand my work/life expectations/goals and my potential values to make a comprehensive assessment. Brno is also a great place for me to work for couple years, I knew there’re also a lot of brilliant people there if there’re opportunities for me. At last, thank you for reading my long tedious maybe immature thoughts.</p>
+<p>[1] <a href="https://opensource.com/business/09/9/tom-sawyer-whitewashing-fences-and-building-communities-online" target="_blank" rel="external">https://opensource.com/business/09/9/tom-sawyer-whitewashing-fences-and-building-communities-online</a></p>
+<p>[2] <a href="https://en.wikipedia.org/wiki/Chinese_Civil_War" target="_blank" rel="external">https://en.wikipedia.org/wiki/Chinese_Civil_War</a></p>
+<p>[3] <a href="https://en.wikipedia.org/wiki/One-child_policy" target="_blank" rel="external">https://en.wikipedia.org/wiki/One-child_policy</a></p>
+<p>[4] <a href="https://en.wikipedia.org/wiki/Last_Week_Tonight_with_John_Oliver" target="_blank" rel="external">https://en.wikipedia.org/wiki/Last_Week_Tonight_with_John_Oliver</a></p>
+<p>[5] <a href="https://en.wikipedia.org/wiki/The_Philip_DeFranco_Show" target="_blank" rel="external">https://en.wikipedia.org/wiki/The_Philip_DeFranco_Show</a></p>
+]]></content>
+      
+        <categories>
+            
+            <category> thinking </category>
+            
+        </categories>
+        
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[list 2018]]></title>
       <url>/2018/03/15/2018list/</url>
       <content type="html"><![CDATA[<ol>
@@ -57,33 +97,54 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Some of my thoughts about Red Hat <<The Open Organization>>]]></title>
-      <url>/2018/02/26/thought-about-open-source/</url>
-      <content type="html"><![CDATA[<h3 id="The-benefit-of-Open-Source-and-Open-Organization"><a href="#The-benefit-of-Open-Source-and-Open-Organization" class="headerlink" title="The benefit of Open Source and Open Organization"></a>The benefit of Open Source and Open Organization</h3><p>The most significant misunderstanding of open source is “Tom Sawyer” model[1] of collaborations: you stare at your own pieces of “cake”, and wish people could jump in and help you instead of helping each other to make the whole “cake” bigger so everyone could be benefit from it. Red Hat is the latter one: to be the catalyst in communities of customers, contributors, and partners creating better technology the open source way.</p>
-<p>Being catalyst is an insightful thinking which need truly collaborations from different organizations who willing to give up their own “shrewdness” and work together. To be honest, I don’t know what’s the future of open source will be like, just like I don’t know when human could colonize Mars, but I firmly believe we will be there someday.</p>
-<p>There may have an inaccurate metaphor in my humble opinion to support my belief, the open source way qualified sharing economy: connection is more important than ownership, collaborations make resource being shared to make the society more efficient. Think about Airbnb, Uber, Google, Facebook… they don’t own contents/properties, but they have the connections. Sharing software is build a community provide an open space/connections for people to share intellectual properties, ideas, contributions from different countries, corporations. It will definitely lower the cost of software development cost, making the products more creativity, make hard problems being solved, is about making the world more efficient, making the “cake” bigger in a holistic view.</p>
-<h3 id="Top-Down-vs-Bottom-Up"><a href="#Top-Down-vs-Bottom-Up" class="headerlink" title="Top Down vs Bottom Up"></a>Top Down vs Bottom Up</h3><p>Top Down hierarchy works for traditional company which the environment and goal is stable enough and everyone need to do is just follow the “correct” order do it efficiently, But Bottom up hierarchy works for company need creativity, fast move which means the environment and goal cannot be easily foreseen.</p>
-<p>This make me remind an example of the Chinese Civil War[2], The Communist Party of China(CPC) win the war against Kuomintang-led government(KMT), the reason could be explained by “Top Down vs Bottom Up” theory, KMT uses Top Down hierarchy which seems more efficiency, but it could be had a severe problem during the war when the communication in the hierarchy being blocked. But Bottom Up hierarchy is make sure everyone even poor peasants and workers understand what they fight for and why (farmland reform) and have the inner momentum to fight fiercely even there’s no one giving them order. (igniting their passion)</p>
-<h3 id="Creativity"><a href="#Creativity" class="headerlink" title="Creativity"></a>Creativity</h3><p>Previously, my understanding of creativity is narrowed: I always thought creativity is only some scientists pops up some brilliant ideas, or win some new fundamental finding prize in science, or some big corporation invent some new intellectual patents. But I was wrong, actually creativity is everywhere, think about apple, each release of the iPhone, the new product blows everybody’s mind, and then everyone starts to follow, turn out being the number one of the industry need creativity. So as Red Hat, we being the number one company of open source industry, everything we do will impact the open source community, and if we being creative enough, that open source could have the chance to be more gleaming.</p>
-<h3 id="Freedom-Openness-Diversity"><a href="#Freedom-Openness-Diversity" class="headerlink" title="Freedom, Openness, Diversity"></a>Freedom, Openness, Diversity</h3><p>Freedom, Openness and Diversity is the catalyst of creativity. Imagine what if scientific research world would be like without freedom, openness and diversity: political interference will lead to scientific fraud, benefit-oriented interference will lead to we miss some potential evolutionary inventions. Think about MIT media labs which was originally formed by some marginalized but talented professors whose research is not that “beneficial enough”, and the MIT give them a chance to form their own lab and boom: touchscreen, electronic ink, scratch programming design for kids, artificial prosthesis, wearable device, GPS vehicle tracking system etc all comes from media lab which are incredible inventions. Imagine each countries’ scientist/engineer all incarcerated in their own countries, never had the chance to have an open discussion/conference. As second industrial revolution passed almost a hundred year, the scientific/engineering problems we are tackling are way more difficult and complicated than anything before, so having a freedom, openness, diversity environment to collaborations are important. And I have to admit, for this area, US as an ethnic melt pot is way more advanced than any other countries.</p>
-<h3 id="The-reason-why-I-want-to-work-for-Red-Hat-and-in-US"><a href="#The-reason-why-I-want-to-work-for-Red-Hat-and-in-US" class="headerlink" title="The reason why I want to work for Red Hat and in US"></a>The reason why I want to work for Red Hat and in US</h3><p>First, I want to explain couple reasons about why I want to work in US, especially in Raleigh.</p>
-<ol>
-<li><p>Work reason:<br> 1.1 My Kubernetes community background/experience is #sig-cli and #sig-api-machinery, I have some collaborations with Clayton, Jordan, David, Juan, and if I have the chance to face to face communicate with them, that would be more efficiency. Also, Clayton, Jordan, David they’re like my role models from all perspective, it would be really valuable even if I could have the chance to chatting with them during the lunchtime or casual time. Collaborate with brilliant people and observe their behaviors is a great way to improve yourself.</p>
-</li>
-<li><p>Life reason:</p>
-<p> 2.1 I have three cousins work and live in US, since the one-child policy[3], two of them are really close to me just like brother and sisters.</p>
-<p> 2.2 Personalities/culture influences, I’m kind of rebel since I was in school, I always want to stand up and speak up, but maybe due to the Chinese/Confucius culture influences, I don’t have many chances to do that. Sometimes Confucius philosophy is good, but there’s a couple of common bad habits I been observed during the 20 years I grew up in this land: 1. Lack of compassion and empathy 2. Hive mind, subordinate thinking 3. Put money above all. But I’m not saying US is the greatest, and china is horrible, US do has a lot of problems from my online observation on YouTube[4][5]. But one of my expat friend really inspired me by told me: “You have to be truly experienced two different cultures to be really open-minded and decide where’s the best place you want to fit in.”</p>
-<p> 2.3 I love music and most of my favorite bands/singers are from US and there’re definitely fewer concerts in China here, Raleigh is close to Tennessee : )</p>
-</li>
+      <title><![CDATA[2017读书清单]]></title>
+      <url>/2018/03/14/reading-list/</url>
+      <content type="html"><![CDATA[<h3 id="今年读的一些书"><a href="#今年读的一些书" class="headerlink" title="今年读的一些书"></a>今年读的一些书</h3><ol>
+<li>迷人的材料</li>
+<li>Kubernetes权威指南</li>
+<li>Docker容器与容器云</li>
+<li>人类简史</li>
+<li>Go语言编程</li>
+<li>财富自由之路</li>
+<li>智能时代</li>
+<li>Twenty Thousand Leagues Under the Sea (还未看完)</li>
+<li>Originals: How Non-Conformists Move the World</li>
+<li>Go程序设计语言(大概看了一下)</li>
+<li>The Open Organization: Igniting Passion and Performance</li>
+<li>Design patterns for container-based distributed systems (tech paper)</li>
 </ol>
-<p>Second, the reason I think Red Hat is a good work place for me.</p>
-<p>‘“Everyone can build their own impact in the open organization”’ I vaguely remember this sentence exist in the book and that was really fascinating to me. Life is not just about making money, taking care families(I mean future family not my divorced parents), building impact, be open-minded, helping others are more important to me… I love coding, but I’m not a Chinese nerdy guy who only can code, and I do have some other potential abilities like public speaking, volunteering, Chinese/Asian culture background… could be beneficial to company in the future. </p>
-<h3 id="But-it’s-not-necessary-in-a-short-term"><a href="#But-it’s-not-necessary-in-a-short-term" class="headerlink" title="But it’s not necessary in a short term"></a>But it’s not necessary in a short term</h3><p>So I’m not trying to persuade you guys, I know there might be some cost prohibitive reasons for a none-senior engineer to relocate and I totally understand. I just want to make sure you guys understand my work/life expectations/goals and my potential values to make a comprehensive assessment. Brno is also a great place for me to work for couple years, I knew there’re also a lot of brilliant people there if there’re opportunities for me. At last, thank you for reading my long tedious maybe immature thoughts.</p>
-<p>[1] <a href="https://opensource.com/business/09/9/tom-sawyer-whitewashing-fences-and-building-communities-online" target="_blank" rel="external">https://opensource.com/business/09/9/tom-sawyer-whitewashing-fences-and-building-communities-online</a></p>
-<p>[2] <a href="https://en.wikipedia.org/wiki/Chinese_Civil_War" target="_blank" rel="external">https://en.wikipedia.org/wiki/Chinese_Civil_War</a></p>
-<p>[3] <a href="https://en.wikipedia.org/wiki/One-child_policy" target="_blank" rel="external">https://en.wikipedia.org/wiki/One-child_policy</a></p>
-<p>[4] <a href="https://en.wikipedia.org/wiki/Last_Week_Tonight_with_John_Oliver" target="_blank" rel="external">https://en.wikipedia.org/wiki/Last_Week_Tonight_with_John_Oliver</a></p>
-<p>[5] <a href="https://en.wikipedia.org/wiki/The_Philip_DeFranco_Show" target="_blank" rel="external">https://en.wikipedia.org/wiki/The_Philip_DeFranco_Show</a></p>
+<p>还有一些零星的书和Paper没有列出来。还有两篇想读的Paper还没有看完</p>
+<ol>
+<li>bitcoin a peer-to-peer electronic cash system</li>
+<li>MapReduce: Simplified Data Processing on Large Clusters</li>
+</ol>
+<p>很惭愧，因为今年重心全放在了工作，社区工作和GRE单词上,并没有读多少书….</p>
+<p>不过今年估计最少又掌握了一些新单词(整理出了一个整本单词本),相比去年拙劣的考分，如果明年年初再考一次估计Verbal会有长远进步…</p>
+<p>另外今年还听了一些书评，这里也顺便列出来，以后有空把这些原版给读了(优先级并不高,除了未来简史和另外两本*)</p>
+<ol>
+<li>Homo Deus: A Brief History of Tomorro</li>
+<li>Trying not to try: The Art and Science of Spontaneity</li>
+<li>Messy: The Power of Disorder to Transform Our Lives</li>
+<li>Algorithms to Live By: The computer Science of Human Decisions</li>
+<li>Success and Luck: Good Fortune and the Myth of Meritocracy</li>
+<li>The End of Average: How We Succeed in a World That Values Sameness</li>
+<li>The Attention Merchants: The Epic Scramble to Get Inside Our Heads</li>
+<li>Hit Makers: How Things Become Popular</li>
+<li>Stretch: Unlock the Power of Less- and Achieve More That You Ever Imagined</li>
+<li>The Complacent Class: The Self-Defeating Quest fro the American Dream</li>
+<li>Tools of Titans: The Tactics, Routines, and Habits of Billionaires, Icons, and World-Class Performers</li>
+<li>Sensemaking: The Power of the Humanities in the Age of the Algorithm</li>
+<li>Decisive: How to make better choices in life and work</li>
+<li>Option B: Facing Adversity, Building Resilience, and Finding Joy (Sheryl SandBerg)</li>
+<li>Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are</li>
+<li>Barking Up the Wrong Tree: The surprising Science Behind Why Everything You Know About Success Is Wrong</li>
+<li>Astrophysics for People in a Hurry</li>
+<li>Stealing Fire: How Silicon Valley, the Navy SEALs, and Maverick Scientists Are Revolutionzing the Way We live and Work</li>
+<li>The Telomere Effect: A Rveolutionary Approach to Living Younger, Healthier, Longer (重点)</li>
+<li>Popular: The Power of Likability in a Status- Obsessed World</li>
+<li>Peak Performance: Elevate Your Game, Avoid Burnout, and Thrive with the New Science of Success (重点,感受颇深)</li>
+</ol>
+<h3 id="最后一些明年想读的书"><a href="#最后一些明年想读的书" class="headerlink" title="最后一些明年想读的书"></a>最后一些明年想读的书</h3><p>一些数学书，逻辑书(刚从家带过来的基本)<br>超越感觉 批判性思维<br>Planet Google (之前买的口袋书，等公交或者地铁上读,纯粹刷一下阅读量)<br>经济学人 （全年期刊订阅)</p>
 ]]></content>
       
         <categories>
@@ -250,66 +311,6 @@
         <categories>
             
             <category> Kubernetes </category>
-            
-        </categories>
-        
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[2017读书清单]]></title>
-      <url>/2018/01/17/reading-list/</url>
-      <content type="html"><![CDATA[<h3 id="今年读的一些书"><a href="#今年读的一些书" class="headerlink" title="今年读的一些书"></a>今年读的一些书</h3><ol>
-<li>迷人的材料</li>
-<li>Kubernetes权威指南</li>
-<li>Docker容器与容器云</li>
-<li>人类简史</li>
-<li>Go语言编程</li>
-<li>财富自由之路</li>
-<li>智能时代</li>
-<li>Twenty Thousand Leagues Under the Sea (还未看完)</li>
-<li>Originals: How Non-Conformists Move the World</li>
-<li>Go程序设计语言(大概看了一下)</li>
-<li>The Open Organization: Igniting Passion and Performance</li>
-<li>Design patterns for container-based distributed systems (tech paper)</li>
-</ol>
-<p>还有一些零星的书和Paper没有列出来。还有两篇想读的Paper还没有看完</p>
-<ol>
-<li>bitcoin a peer-to-peer electronic cash system</li>
-<li>MapReduce: Simplified Data Processing on Large Clusters</li>
-</ol>
-<p>很惭愧，因为今年重心全放在了工作，社区工作和GRE单词上,并没有读多少书….</p>
-<p>不过今年估计最少又掌握了一些新单词(整理出了一个整本单词本),相比去年拙劣的考分，如果明年年初再考一次估计Verbal会有长远进步…</p>
-<p>另外今年还听了一些书评，这里也顺便列出来，以后有空把这些原版给读了(优先级并不高,除了未来简史和另外两本*)</p>
-<ol>
-<li>Homo Deus: A Brief History of Tomorro</li>
-<li>Trying not to try: The Art and Science of Spontaneity</li>
-<li>Messy: The Power of Disorder to Transform Our Lives</li>
-<li>Algorithms to Live By: The computer Science of Human Decisions</li>
-<li>Success and Luck: Good Fortune and the Myth of Meritocracy</li>
-<li>The End of Average: How We Succeed in a World That Values Sameness</li>
-<li>The Attention Merchants: The Epic Scramble to Get Inside Our Heads</li>
-<li>Hit Makers: How Things Become Popular</li>
-<li>Stretch: Unlock the Power of Less- and Achieve More That You Ever Imagined</li>
-<li>The Complacent Class: The Self-Defeating Quest fro the American Dream</li>
-<li>Tools of Titans: The Tactics, Routines, and Habits of Billionaires, Icons, and World-Class Performers</li>
-<li>Sensemaking: The Power of the Humanities in the Age of the Algorithm</li>
-<li>Decisive: How to make better choices in life and work</li>
-<li>Option B: Facing Adversity, Building Resilience, and Finding Joy (Sheryl SandBerg)</li>
-<li>Everybody Lies: Big Data, New Data, and What the Internet Can Tell Us About Who We Really Are</li>
-<li>Barking Up the Wrong Tree: The surprising Science Behind Why Everything You Know About Success Is Wrong</li>
-<li>Astrophysics for People in a Hurry</li>
-<li>Stealing Fire: How Silicon Valley, the Navy SEALs, and Maverick Scientists Are Revolutionzing the Way We live and Work</li>
-<li>The Telomere Effect: A Rveolutionary Approach to Living Younger, Healthier, Longer (重点)</li>
-<li>Popular: The Power of Likability in a Status- Obsessed World</li>
-<li>Peak Performance: Elevate Your Game, Avoid Burnout, and Thrive with the New Science of Success (重点,感受颇深)</li>
-</ol>
-<h3 id="最后一些明年想读的书"><a href="#最后一些明年想读的书" class="headerlink" title="最后一些明年想读的书"></a>最后一些明年想读的书</h3><p>一些数学书，逻辑书(刚从家带过来的基本)<br>超越感觉 批判性思维<br>Planet Google (之前买的口袋书，等公交或者地铁上读,纯粹刷一下阅读量)<br>经济学人 （全年期刊订阅)</p>
-]]></content>
-      
-        <categories>
-            
-            <category> thinking </category>
             
         </categories>
         
